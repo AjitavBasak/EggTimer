@@ -10,6 +10,6 @@ Feature: Feature to test loading
     Then User verifies if timer is reduced by 1 sec for "<Time>"
     Then User verifies if alert is present after "<Time>"
     Examples:
-      | Browser | Time  |
-      | chrome  | 1     |
-      | chrome  | 1 sec |
+      | Browser | Time   |
+      | chrome  | 25     |
+      | chrome  | 25 sec |
