@@ -25,3 +25,5 @@ The Automation framework is simple and easy to maintain.
 12. The control moves from feature file to the step defination classes placed in test/com.eggtimer.Steps 
 13. Every Step will have a page which has the implementation using the wrappers mentioned above.
 14. All the wrappers are placed under utils
+15. The timer check is allowed 3 checks before failing to make sure its not because of update lag.
+16. The reports are configured to have surefire report, cucumber report in html form and also cucumber publish facility.
