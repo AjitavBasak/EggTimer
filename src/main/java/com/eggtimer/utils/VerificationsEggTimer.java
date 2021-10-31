@@ -17,6 +17,7 @@ public class VerificationsEggTimer {
 		long additionalPageLoadTime = Long.parseLong(pageLoadTimeVariableinSecond);
 		timeinSeconds += additionalPageLoadTime;
 		WebDriverWait w = uiElementAction.waitTimeinSeconds(timeinSeconds);
+		Log.info("The Alert box is present: " + (w.until(ExpectedConditions.alertIsPresent()) != null));
 		Assert.assertTrue(w.until(ExpectedConditions.alertIsPresent()) != null);
 	}
 	
@@ -34,27 +35,34 @@ public class VerificationsEggTimer {
 		System.out.println(time);
 		Long timeinSeconds = Long.parseLong(time);
 		int counter = 0;
-		boolean assertion = false;
-		for (int i = 0; i < timeinSeconds; i++) {
+		boolean assertion = true;
+		for (long reducingTimeCounter = timeinSeconds-1; reducingTimeCounter >0; reducingTimeCounter--) {
 			if (counter == 3) {
 				Assert.fail("The Timer is not proper. Does not decrease every second");
 			}
 			WebDriverWait w = uiElementAction.waitTimeinSeconds(1);
-			timeinSeconds -= 1;
 			try {
 				Thread.sleep(1000);
 			} catch (Exception e) {
 			}
 			String text = uiElementAction.getText("timer");
-			String timeReduced = Long.toString(timeinSeconds);
+			String timeReduced = Long.toString(reducingTimeCounter);
 			assertion = text.contains(timeReduced);
 			if (!assertion) {
 				Log.info("Assertion of timer failed for " + timeReduced);
 				counter++;
-				
+			}
+			if(counter!=3){
+				assertion = true;
 			}
 		}
 		Log.info("The refresh happens properly: " + assertion);
 		Assert.assertTrue("The refresh happens properly: " + assertion, assertion);
+	}
+	
+	public void verifyAlertText(String message){
+		boolean assertion=message.equals(uiElementAction.getTextfromAlert());
+		Log.info("Alert message is correct : "+ assertion);
+		Assert.assertTrue("Alert message is correct : "+ assertion,assertion);
 	}
 }

@@ -7,9 +7,10 @@ Feature: Feature to test loading
     Then User validate page gets loaded
     When User enters "<Time>" in the website
     And User clicks on start
-    Then User verifies if timer is reduced by 1 sec for "<Time>"
-    Then User verifies if alert is present after "<Time>"
+    Then User verifies if timer is reduced by 1 sec for "<Time>" in classic mode
+    Then User verifies if alert is present after "<Time>" in classic mode says
+    |Time Expired!|
     Examples:
       | Browser | Time   |
-      | chrome  | 25     |
-      | chrome  | 25 sec |
+      | chrome  | 9      |
+      | chrome  | 9 sec  |

@@ -28,7 +28,9 @@ public class EggTimerPage {
 	public void verifyAlertPresentAfterWait(String time) {
 		verificationsEggTimer.verifyAlertPresentAfterWait(time);
 	}
-	
+	public void verifyAlertText(String message){
+		verificationsEggTimer.verifyAlertText(message);
+	}
 	public void verifyTimer(String time) {
 		verificationsEggTimer.verifyTimer(time);
 	}
