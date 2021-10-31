@@ -1,5 +1,7 @@
-# EggTimer
+# EggTimer: -
 The Automation framework is simple and easy to maintain.
+
+#Brief Description: -
 1. I have used BDD framework with the help of Cucumber
 2. A property file has been created for all the generic configuration for the project under resources module of main
 3. Created a object repository of Elements in a property file with few conventions.
@@ -27,3 +29,21 @@ The Automation framework is simple and easy to maintain.
 14. All the wrappers are placed under utils
 15. The timer check is allowed 3 checks before failing to make sure its not because of update lag.
 16. The reports are configured to have surefire report, cucumber report in html form and also cucumber publish facility.
+17. Comments given whereever seemed necessary
+18. Currently Tag used is on feature level but can be updated for scenario and hence only
+ required scenario can be run
+
+#Highlights: -
+1. Easy maintenance
+2. Easy coding for tester 
+3. Any change in parameters is easy to handle
+
+#Improvements: -
+1. Improve the per sec verify logic
+2. Handle the update lag/network lag/ code lag in a better way
+3. Zero code for Tester.
+
+#Running ways: -
+1. Run the TestRunner class
+2. Run the Feature file
+3. Run mvn clean install from terminal

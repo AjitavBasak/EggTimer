@@ -32,7 +32,7 @@ public class VerificationsEggTimer {
 	
 	public void verifyTimer(String time) {
 		time = time.replaceAll("\\D+", "");
-		System.out.println(time);
+
 		Long timeinSeconds = Long.parseLong(time);
 		int counter = 0;
 		boolean assertion = true;
