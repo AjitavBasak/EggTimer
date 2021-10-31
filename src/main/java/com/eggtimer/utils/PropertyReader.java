@@ -15,7 +15,10 @@ public class PropertyReader {
 	public static String readItem(String propertyName) {
 		return properties.getProperty(propertyName);
 	}
-	
+	/**
+	 * Loads the property of the project configuration
+	 *
+	 */
 	public void loadConfigProperties() {
 		properties = new Properties();
 		String fileNameConfig = System.getProperty("user.dir") + "/src/main/resources" +
