@@ -14,12 +14,13 @@ public class LoadObjectAndGetWebElement {
 	static Properties properties;
 	TestDriver testDriver = TestDriver.getInstance();
 	WebDriver driver = testDriver.getDriver();
+	
 	/**
 	 * Loads the property after getting the name of the file as the url navigated to with all
 	 * special character replaced with '_'.
 	 * running for every scenario.
 	 *
-	 * @param  url the url navigated to to extract the file name.
+	 * @param url the url navigated to to extract the file name.
 	 */
 	public void loadObjectProperties(String url) {
 		String name = url.replaceAll("/", "_");
@@ -34,6 +35,7 @@ public class LoadObjectAndGetWebElement {
 			throw new RuntimeException("Property file searching for : " + fileNameConfig + "/n " + "Not" + " able " + "to find");
 		}
 	}
+	
 	/**
 	 * gets the By object for the WebElement from the property file where locator is stored and
 	 * acts as object repository
@@ -62,6 +64,7 @@ public class LoadObjectAndGetWebElement {
 		}
 		return null;
 	}
+	
 	/**
 	 * gets the webElement
 	 *

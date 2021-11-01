@@ -82,9 +82,9 @@ public class TestDriver {
 		Log.info("Browser Selected  :" + browser.toUpperCase());
 		return driver;
 	}
+	
 	/**
 	 * gives the Driver instance to all class who requires it.
-	 *
 	 *
 	 * @return The browser Driver instance
 	 */
