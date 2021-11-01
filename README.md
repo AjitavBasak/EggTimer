@@ -44,6 +44,6 @@ The Automation framework is simple and easy to maintain.
 3. Zero code for Tester.
 
 #Running ways: -
-1. Run the TestRunner class
+1. Run the TestRunner class. Can change the tag to test only 1 scenario. by default it is to test the feature
 2. Run the Feature file
 3. Run mvn clean install from terminal
